@@ -1,0 +1,592 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #a0b0c5;
+
+    color: #1e293b;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+    width: 94%;
+
+    max-width: 1400px;
+
+    margin: 35px auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    background: white;
+
+    padding: 25px 30px;
+
+    border-radius: 14px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+
+    border: 1px solid #e5e7eb;
+}
+
+
+.header h1 {
+    font-size: 26px;
+
+    color: #1e3a8a;
+
+    margin-bottom: 5px;
+}
+
+
+.header p {
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+
+.tanggal {
+    color: #64748b;
+
+    font-size: 14px;
+
+    background: #f1f5f9;
+
+    padding: 10px 15px;
+
+    border-radius: 8px;
+}
+
+
+/* =========================
+   SUMMARY
+========================= */
+
+.summary {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+}
+
+
+.summary-item {
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    border: 1px solid #e5e7eb;
+}
+
+
+.summary-item span {
+    display: block;
+
+    color: #64748b;
+
+    font-size: 13px;
+
+    margin-bottom: 8px;
+}
+
+
+.summary-item strong {
+    color: #1e3a8a;
+
+    font-size: 19px;
+}
+
+
+/* =========================
+   TABLE BOX
+========================= */
+
+.table-box {
+    background: white;
+
+    border-radius: 14px;
+
+    border: 1px solid #e5e7eb;
+
+    overflow: hidden;
+}
+
+
+.table-title {
+    padding: 22px 25px;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+
+.table-title h2 {
+    font-size: 20px;
+
+    margin-bottom: 5px;
+}
+
+
+.table-title p {
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   TABLE
+========================= */
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 1100px;
+}
+
+
+thead {
+    background: #f8fafc;
+}
+
+
+th {
+    padding: 14px 15px;
+
+    text-align: left;
+
+    color: #64748b;
+
+    font-size: 11px;
+
+    letter-spacing: .5px;
+
+    white-space: nowrap;
+}
+
+
+td {
+    padding: 15px;
+
+    border-top: 1px solid #edf0f3;
+
+    font-size: 13px;
+
+    vertical-align: middle;
+}
+
+
+tbody tr {
+    transition: .2s;
+}
+
+
+tbody tr:hover {
+    background: #f8fafc;
+}
+
+
+/* =========================
+   PRODUK
+========================= */
+
+.product {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    min-width: 230px;
+}
+
+
+.product-icon {
+    width: 40px;
+
+    height: 40px;
+
+    background: #eff6ff;
+
+    border-radius: 9px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 19px;
+}
+
+
+.product strong {
+    display: block;
+
+    color: #1e293b;
+
+    margin-bottom: 4px;
+}
+
+
+.product small {
+    display: block;
+
+    color: #94a3b8;
+
+    font-size: 10px;
+
+    max-width: 210px;
+}
+
+
+.id {
+    color: #94a3b8;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   KATEGORI
+========================= */
+
+.kategori {
+    background: #eef2ff;
+
+    color: #4f46e5;
+
+    padding: 6px 10px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================
+   HARGA
+========================= */
+
+.harga {
+    color: #2563eb;
+
+    white-space: nowrap;
+}
+
+
+/* =========================
+   STOK
+========================= */
+
+.jumlah-stok {
+    font-size: 17px;
+
+    margin-right: 3px;
+}
+
+
+td small {
+    color: #94a3b8;
+}
+
+
+/* =========================
+   STATUS
+========================= */
+
+.status {
+    display: inline-block;
+
+    padding: 6px 10px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    font-weight: bold;
+}
+
+
+/* Stok aman */
+
+.stok-aman .status {
+    background: #dcfce7;
+
+    color: #15803d;
+}
+
+
+/* Stok menipis */
+
+.stok-menipis {
+    background: #fffbeb;
+}
+
+
+.stok-menipis .status {
+    background: #fef3c7;
+
+    color: #b45309;
+}
+
+
+/* Stok kritis */
+
+.stok-kritis {
+    background: #fff1f2;
+}
+
+
+.stok-kritis .status {
+    background: #fee2e2;
+
+    color: #dc2626;
+}
+
+
+/* =========================
+   TERJUAL
+========================= */
+
+.terjual {
+    background: #f1f5f9;
+
+    padding: 6px 10px;
+
+    border-radius: 7px;
+
+    font-weight: bold;
+
+    color: #475569;
+}
+
+
+/* =========================
+   AKSI
+========================= */
+
+.aksi {
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+}
+
+
+.btn {
+    text-decoration: none;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    height: 30px;
+
+    border-radius: 6px;
+
+    font-weight: bold;
+
+    transition: .2s;
+}
+
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+
+/* tombol minus */
+
+.kurang {
+    width: 30px;
+
+    background: #fee2e2;
+
+    color: #dc2626;
+
+    font-size: 18px;
+}
+
+
+/* tombol plus */
+
+.tambah {
+    width: 30px;
+
+    background: #dcfce7;
+
+    color: #16a34a;
+
+    font-size: 18px;
+}
+
+
+/* tombol jual */
+
+.jual {
+    background: #2563eb;
+
+    color: white;
+
+    padding: 0 12px;
+
+    font-size: 11px;
+}
+
+
+.jual:hover {
+    background: #1d4ed8;
+}
+
+
+/* =========================
+   KETERANGAN
+========================= */
+
+.keterangan {
+    background: white;
+
+    margin-top: 15px;
+
+    padding: 15px 20px;
+
+    border-radius: 10px;
+
+    border: 1px solid #e5e7eb;
+
+    display: flex;
+
+    gap: 25px;
+
+    color: #64748b;
+
+    font-size: 12px;
+}
+
+
+.legend {
+    display: inline-block;
+
+    width: 9px;
+
+    height: 9px;
+
+    border-radius: 50%;
+
+    margin-right: 5px;
+}
+
+
+.legend.aman {
+    background: #22c55e;
+}
+
+
+.legend.menipis {
+    background: #f59e0b;
+}
+
+
+.legend.kritis {
+    background: #ef4444;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+
+    color: #94a3b8;
+
+    font-size: 12px;
+
+    padding: 25px 0;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .summary {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 96%;
+
+        margin-top: 15px;
+    }
+
+
+    .header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+
+    .summary {
+        grid-template-columns: 1fr;
+    }
+
+
+    .keterangan {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+}
